@@ -2,8 +2,7 @@
  {{!-- * Create a button in `index.handlebars` that will submit the user input into the database. --}}
 
 <div class="container-flex">
-    <div><img src="/assets/img/burger-clipart-easy-3-transparent.png" height="300px" width="350px"></div>
-    <h1 class="heading">Eat-Da-Burger!</h1>
+    <div><h1 class="glow">Eat-Da-Burger!</h1></div>
 
     <div class="row d-flex burger-div">
         <div class="col">
@@ -36,9 +35,9 @@
     <div class="burger-input">
 
         <form action="/api/burgers" method="POST">
-            <textarea type="text" name="burger" id="burger-input" class="col-md-3" placeholder="Burger Name"></textarea>
+            <textarea type="text" name="burger" id="burger-input" class="shadow-lg col-md-3 rounded" placeholder="Burger Name"></textarea>
             <p>Enter a burger you want to eat, then click the "Add Burger" button.</p>
-            <button type="submit" id="add-burger" class="btn btn-primary btn-lg">Add Burger</button>
+            <button type="submit" id="add-burger" class="shadow-lg btn btn-info text-light btn-lg">Add Burger</button>
         </form>
     </div>
 

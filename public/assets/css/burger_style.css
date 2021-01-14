@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+background-image: url("https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  /* position: relative; */
+}
+
 h1 {
     font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    margin: 4rem;
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f52f46, 0 0 40px #f52f46, 0 0 50px #f52f46, 0 0 60px #f52f46, 0 0 70px #f52f46;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.582);
+    border: none;
+}
+
+html,
+body,
+.container-flex {
+  text-align: center;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
 }
