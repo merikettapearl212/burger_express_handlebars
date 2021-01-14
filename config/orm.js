@@ -8,8 +8,8 @@
 // Import (require) `connection.js` into `orm.js`
 const connection = require("../config/connection");
 
-function printQuestionMarks(num) {
-    var arr = [];
+function createMarks(num) {
+    const arr = [];
   
     for (let i = 0; i < num; i++) {
       arr.push("?");
@@ -19,10 +19,9 @@ function printQuestionMarks(num) {
   }
   
   
-  function objToSql(ob) {
-    var arr = [];
-  
-    
+  function translateSql(ob) {
+    const arr = [];
+
     for (const key in ob) {
       var value = ob[key];
       if (Object.hasOwnProperty.call(ob, key)) {
@@ -38,9 +37,9 @@ function printQuestionMarks(num) {
     return arr.toString();
   }
   
-  var orm = {
+  const orm = {
     selectAll: function(table, cb) {
-      var queryString = "SELECT * FROM ??";
+      const queryString = "SELECT * FROM ??";
       console.log(queryString);
       connection.query(queryString, [table], function(err, result) {
         if (err) {
@@ -50,13 +49,13 @@ function printQuestionMarks(num) {
       });
     },
     insertOne: function(table, cols, vals, cb) {
-      var queryString = "INSERT INTO " + table;
+      const queryString = "INSERT INTO " + table;
   
       queryString += " (";
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
+      queryString += createMarks(vals.length);
       queryString += ") ";
   
       console.log(queryString);
@@ -70,10 +69,10 @@ function printQuestionMarks(num) {
       });
     },
     updateOne: function(table, objColVals, condition, cb) {
-      var queryString = "UPDATE " + table;
+      const queryString = "UPDATE " + table;
   
       queryString += " SET ";
-      queryString += objToSql(objColVals);
+      queryString += translateSql(objColVals);
       queryString += " WHERE ";
       queryString += condition;
   
