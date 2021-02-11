@@ -1,18 +1,19 @@
  {{!-- Setup the `index.handlebars` to have the template that Handlebars can render onto. --}}
  {{!-- * Create a button in `index.handlebars` that will submit the user input into the database. --}}
 
-<div class="container-flex">
+<div class="container">
     <div><h1 class="glow">Eat-Da-Burger!</h1></div>
 
-    <div class="row d-flex burger-div">
-        <div class="col">
-            <ul id="burgers-to-devour">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <ul id="burgers-to-devour" class="shadow-lg p-2 rounded devoured-div">
                 <h3>Burgers to Devour!</h3>
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li>
                     <p>{{burger_name}} 
-                        <button class="devour btn btn-danger btn-sm" data-burgerid="{{id}}">Devour it!</button>
+                        <button class="devour btn btn-danger btn-sm" data-burgerid="{{id}}" data-order="true">Devour it!</button>
+                        <button class="delete-burger btn btn-dark btn-sm" data-id="{{this.id}}">X</button>
                         </p>
                 </li>
                 {{/unless}}
@@ -20,13 +21,15 @@
             </ul>
         </div>
 
-        <div class="col">
-            <ul id="burgers-devoured">
+        <div class="col-5">
+            <ul id="burgers-devoured" class="shadow-lg p-2 rounded devoured-div">
                 <h3>Burgers Devoured!</h3>
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>
-                    <p>{{burger_name}}</p>
+                    <p>{{burger_name}}
+                        <button class="delete-burger btn btn-dark btn-sm" data-id="{{this.id}}">X</button>
+                    </p>
                 </li>
                 {{/if}}
                 {{/each}}

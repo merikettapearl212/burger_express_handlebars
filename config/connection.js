@@ -1,8 +1,9 @@
 // * Inside the `connection.js` file, setup the code to connect Node to MySQL.
 
 //    * Export the connection.
-// Set up MySQL connection.
-var mysql = require("mysql");
+const mysql = require("mysql");
+var connection;
+require("dotenv").config();
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -10,17 +11,9 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Paco6969",
-    database: "burgers_db"
+    password: process.env.DB_PASS,
+    database: process.env.DB_DATABASE,
   });
 }
-
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
-
+connection.connect();
 module.exports = connection;
