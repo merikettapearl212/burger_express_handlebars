@@ -6,7 +6,7 @@
 
     <div class="row justify-content-center">
         <div class="col-5">
-            <ul id="burgers-to-devour" class="shadow-lg p-2 rounded devoured-div">
+            <ul id="burgers-to-devour" class="border-glow shadow-lg p-2 rounded devoured-div">
                 <h3>Burgers to Devour!</h3>
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -42,7 +42,7 @@
         <form action="/api/burgers" method="POST">
             <textarea type="text" name="burger" id="burger-input" class="shadow-lg col-md-3 rounded" placeholder="Burger Name"></textarea>
             <p>Enter a burger you want to eat, then click the "Add Burger" button.</p>
-            <button type="submit" id="add-burger" class="shadow-lg btn btn-info text-light btn-lg">Add Burger</button>
+            <button type="submit" id="add-burger" class="shadow-lg btn btn-warning text-light btn-lg">Add Burger</button>
         </form>
     </div>
 

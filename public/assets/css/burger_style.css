@@ -19,19 +19,18 @@ h1{
     font-size: 80px;
     color: #fff;
     text-align: center;
-    color: #fff;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f52f46, 0 0 40px #f52f46, 0 0 50px #f52f46, 0 0 60px #f52f46, 0 0 70px #f52f46;
 }
 
 
 textarea {
     background-color: rgba(255, 255, 255, 0.582);
-    border: none;
+    
 }
 
 .devoured-div {
-  background-color: rgba(0, 0, 0, 0.582);
-    border: none;
+  background-color: rgba(20, 20, 20, 0.582);
+  
 }
 
 html,
