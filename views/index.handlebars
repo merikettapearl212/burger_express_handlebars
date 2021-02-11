@@ -12,7 +12,8 @@
                 {{#unless devoured}}
                 <li>
                     <p>{{burger_name}} 
-                        <button class="devour btn btn-danger btn-sm" data-burgerid="{{id}}" data-order="true">Devour it!</button>
+                        <button class="change-eat btn btn-danger btn-sm" data-id="{{id}}" data-neweat="true">Devour it!</button>
+                        
                         <button class="delete-burger btn btn-dark btn-sm" data-id="{{this.id}}">X</button>
                         </p>
                 </li>
