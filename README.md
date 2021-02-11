@@ -29,7 +29,7 @@ A burger logger with MySQL, Node, Express, Handlebars. Where you can add, devour
 
 ## Heroku link:
  
-[Burger App](https://drive.google.com/file/d/1vtT420tNWfitv-IE5WtAr45ZVNNo-5uj/view)
+[Burger App](https://secret-stream-93300.herokuapp.com/)
 
 #### Screenshot of application:
 <img src="public/assets/img/burger-app-screenshot.png" width="400" height="250">
